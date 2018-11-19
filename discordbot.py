@@ -1,6 +1,5 @@
 import discord
 import os
-import MeCab
 
 client = discord.Client()
 token = os.environ["RBOT1_TOKEN"]
