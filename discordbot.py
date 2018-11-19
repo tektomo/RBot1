@@ -1,17 +1,20 @@
 import discord
 import os
+import MeCab
 
 client = discord.Client()
 token = os.environ["RBOT1_TOKEN"]
 
 @client.event
 async def on_ready():
-    print("I'm here")
+    print("Login successfull!")
+    fmsg = "まじめまして！RBOTです！"
+    await client.send_message(message.channel, fmsg)
     
 @client.event
 async def on_message(message):
-    if message.content.startswith('こんにちは'):
-        reply = 'こんにちにゃーん'
+    if message.content.startswith("にゃーん"):
+        reply = "にゃーん"
         await client.send_message(message.channel, reply)
 
 client.run(token)
