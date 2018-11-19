@@ -11,7 +11,7 @@ async def on_ready():
 @client.event
 async def on_message(message):
     if message.content.startswith("にゃーん"):
-        reply = "にゃーん"
+        reply = "にゃ〜ん"
         await client.send_message(message.channel, reply)
 
 client.run(token)
